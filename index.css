@@ -3,6 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 :root {
   --dark-blue: hsl(233, 26%, 24%);
   --Lime-Green: hsl(136, 65%, 51%);
@@ -260,7 +269,7 @@ h3 {
   object-fit: contain;
   width: 17em;
   align-self: center;
-  margin-left: -1.2em;
+  margin-left: 1.7em;
 }
 .downlogo {
   width: 9.5em;
@@ -277,6 +286,7 @@ h3 {
   padding-bottom: 1.3em;
   font-family: var(--Familys);
   font-size: 1em;
+  margin-left: 1.2em;
 }
 .button2 {
   width: 12rem;
@@ -317,6 +327,13 @@ h3 {
   text-decoration: none;
   padding: 0.5em;
 }
+.close {
+  display: none;
+  width: 1.3em;
+  margin-top: -0.3em;
+  margin-left: -3.5em;
+}
+
 .dropdown_content a:hover {
   background-color: black;
   color: white;
@@ -324,6 +341,15 @@ h3 {
 .home:hover .dropdown_content {
   display: block;
   background-color: white;
+  left: 19.5em;
+}
+.home:hover {
+  .close {
+    display: block;
+  }
+  .manu {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -557,10 +583,11 @@ h3 {
   }
   .socialmedia {
     position: relative;
-    right: 7em;
+    right: 7.8em;
     top: 5.5em;
     width: 2em;
     padding-bottom: 2em;
+    margin-left: 0em;
   }
   .footer2 {
     display: flex;
@@ -604,12 +631,16 @@ h3 {
       1;
   }
   .options {
+    margin-left: 0em;
     cursor: pointer;
   }
   .options:hover {
-    color: green;
+    color: var(--Lime-Green);
   }
   .heading2:hover {
-    color: green;
+    color: var(--Lime-Green);
+  }
+  .media:hover a > svg > path {
+    fill: var(--Lime-Green);
   }
 }
